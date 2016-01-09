@@ -1,6 +1,6 @@
-# Requirements
+# Dependencies
 
-    $ npm install -g typescript cordova electron-prebuilt
+    $ npm install -g typescript cordova electron-prebuilt tsd
 
 
 # Compilation
