@@ -1,0 +1,47 @@
+<html>
+
+  <head>
+	
+	<!-- <base href="./" /> -->
+	<title>Appsample</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script>
+	  if(window && window.process && window.process.type)
+	  window.$ = window.jQuery = require("./node_modules/jquery/dist/jquery.min");
+	</script>
+	
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="node_modules/es6-shim/es6-shim.js"></script>
+	<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="node_modules/rxjs/bundles/Rx.js"></script>
+	<script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+	<script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+
+	<script>
+	  System.config({
+	  packages: {
+	  app: {
+	  format: 'register',
+	  defaultExtension: 'js'
+	  }
+	  }
+	  });
+	  System.import('./app/boot')
+	  .then(null, console.error.bind(console));
+	</script>
+
+
+  </head>
+
+  <body>
+	  <my-app>Loading...</my-app>
+  </body>
+
+</html>
